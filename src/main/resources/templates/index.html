@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy | India's #1 Premium Shopping Destination</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    
+    <link rel="stylesheet" th:href="@{/css/fragments/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+    
+    
+</head>
+<body>
+
+	<!-- Navbar Include -->
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge-sale">Big Saving Days is LIVE!</span>
+                    <h1 class="hero-title">Experience <br><span class="magical-text">The Magic of India</span></h1>
+                    <p class="text-white-50 fs-4 mb-5 pe-lg-5">Up to 70% OFF on the brands you love. Exclusive deals on Fashion, Tech, and Home.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <button class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-800 shadow-lg">Shop Now</button>
+                        <button class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">Explore Deals</button>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://m.media-amazon.com/images/I/81fS67+68hL._AC_SL1500_.jpg" class="hero-img img-fluid" alt="Electronics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. CATEGORY SHORTCUTS -->
+    <div class="container category-bar">
+        <div class="cat-scroll">
+            <div class="cat-item">
+                <div class="cat-circle text-primary"><i class="bi bi-phone"></i></div>
+                <span class="cat-name fw-bold">Mobiles</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-danger"><i class="bi bi-bag-heart"></i></div>
+                <span class="cat-name fw-bold">Fashion</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-success"><i class="bi bi-laptop"></i></div>
+                <span class="cat-name fw-bold">Electronics</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-warning"><i class="bi bi-house-door"></i></div>
+                <span class="cat-name fw-bold">Home</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-info"><i class="bi bi-stars"></i></div>
+                <span class="cat-name fw-bold">Beauty</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-dark"><i class="bi bi-speaker"></i></div>
+                <span class="cat-name fw-bold">Gadgets</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-primary"><i class="bi bi-bicycle"></i></div>
+                <span class="cat-name fw-bold">Sports</span>
+            </div>
+            <div class="cat-item">
+                <div class="cat-circle text-danger"><i class="bi bi-gift"></i></div>
+                <span class="cat-name fw-bold">Offers</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. FLASH SALE SECTION -->
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="fw-800 mb-1">🔥 Limited <span class="magical-text">Time Deals</span></h2>
+                    <p class="text-muted">Grab them before the clock hits zero!</p>
+                </div>
+                <div class="timer-badge">
+                    <i class="bi bi-clock-history"></i> Ends in 02:45:12
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <span class="discount-pill">-50% OFF</span>
+                        <div class="img-zoom-box">
+                            <img src="https://m.media-amazon.com/images/I/61f7O6m0u1L._SL1500_.jpg" alt="Watch">
+                        </div>
+                        <h6 class="fw-800 mb-1">Noise Pulse Ultra 2</h6>
+                        <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.5 <span class="text-muted">(1.2k)</span></div>
+                        <div class="d-flex align-items-center">
+                            <span class="fs-4 fw-800">₹999</span>
+                            <span class="text-muted text-decoration-line-through ms-2">₹1,999</span>
+                        </div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <span class="discount-pill">-30% OFF</span>
+                        <div class="img-zoom-box">
+                            <img src="https://m.media-amazon.com/images/I/71p-f29SggL._SL1500_.jpg" alt="Buds">
+                        </div>
+                        <h6 class="fw-800 mb-1">boAt Airdopes 131</h6>
+                        <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.8 <span class="text-muted">(15k)</span></div>
+                        <div class="d-flex align-items-center">
+                            <span class="fs-4 fw-800">₹899</span>
+                            <span class="text-muted text-decoration-line-through ms-2">₹2,499</span>
+                        </div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- 2 more flash sale items -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <span class="discount-pill">-45% OFF</span>
+                        <div class="img-zoom-box">
+                            <img src="https://m.media-amazon.com/images/I/61u9zN1HYCL._SL1500_.jpg" alt="Powerbank">
+                        </div>
+                        <h6 class="fw-800 mb-1">Ambrane 20000mAh</h6>
+                        <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.3 <span class="text-muted">(500)</span></div>
+                        <div class="d-flex align-items-center">
+                            <span class="fs-4 fw-800">₹1,599</span>
+                            <span class="text-muted text-decoration-line-through ms-2">₹2,999</span>
+                        </div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <span class="discount-pill">-20% OFF</span>
+                        <div class="img-zoom-box">
+                            <img src="https://m.media-amazon.com/images/I/617nS-fR-dL._SL1200_.jpg" alt="Keyboard">
+                        </div>
+                        <h6 class="fw-800 mb-1">Razer Deathstalker</h6>
+                        <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.9 <span class="text-muted">(8k)</span></div>
+                        <div class="d-flex align-items-center">
+                            <span class="fs-4 fw-800">₹7,999</span>
+                            <span class="text-muted text-decoration-line-through ms-2">₹9,999</span>
+                        </div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TOP DEALS BANNERS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="offer-banner shadow" style="background-image: url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=800');">
+                        <div style="position: relative; z-index: 2;">
+                            <h2 class="fw-800 mb-2">Electronics Carnival</h2>
+                            <p class="fs-5 mb-4">Laptops & Monitors from <span class="text-warning fw-bold">₹12,999</span></p>
+                            <button class="btn btn-warning rounded-pill px-4 fw-bold">Grab Deal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="offer-banner shadow" style="background-image: url('https://images.unsplash.com/photo-1523381235312-d12833076162?auto=format&fit=crop&q=80&w=800');">
+                        <div style="position: relative; z-index: 2;">
+                            <h2 class="fw-800 mb-2">Summer Fashion Fest</h2>
+                            <p class="fs-5 mb-4">Min <span class="text-info fw-bold">60% OFF</span> on Premium Wear</p>
+                            <button class="btn btn-info text-white rounded-pill px-4 fw-bold">Shop Style</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TOP BRANDS -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h5 class="text-uppercase text-muted fw-bold mb-5" style="letter-spacing: 4px;">Exclusive Brand Partners</h5>
+            <div class="row align-items-center gy-5">
+                <div class="col-4 col-lg-2"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png" class="brand-logo img-fluid" alt="Apple"></div>
+                <div class="col-4 col-lg-2"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" class="brand-logo img-fluid" alt="Samsung"></div>
+                <div class="col-4 col-lg-2"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" class="brand-logo img-fluid" alt="Nike"></div>
+                <div class="col-4 col-lg-2"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" class="brand-logo img-fluid" alt="Adidas"></div>
+                <div class="col-4 col-lg-2"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="brand-logo img-fluid" alt="Netflix"></div>
+                <div class="col-4 col-lg-2"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" class="brand-logo img-fluid" alt="Tesla"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FEATURED SECTION (USP) -->
+    <section class="py-5 bg-white mt-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <i class="bi bi-truck-flatbed magical-text fs-1 mb-3"></i>
+                    <h5 class="fw-800">Free Delivery</h5>
+                    <p class="text-muted small">On orders above ₹499</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-arrow-left-right magical-text fs-1 mb-3"></i>
+                    <h5 class="fw-800">7-Day Returns</h5>
+                    <p class="text-muted small">Easy & No questions asked</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-patch-check magical-text fs-1 mb-3"></i>
+                    <h5 class="fw-800">100% Genuine</h5>
+                    <p class="text-muted small">Directly from top brands</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-wallet2 magical-text fs-1 mb-3"></i>
+                    <h5 class="fw-800">COD Available</h5>
+                    <p class="text-muted small">Pay when you receive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-800 text-center mb-5">Trusted by <span class="magical-text">10M+ Shoppers</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://i.pravatar.cc/100?img=12" class="avatar" alt="User">
+                            <div>
+                                <h6 class="fw-800 mb-0">Rahul Sharma</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted italic">"The delivery was lightning fast! I got my iPhone 15 in just 24 hours. ShopEasy is incredible."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://i.pravatar.cc/100?img=44" class="avatar" alt="User">
+                            <div>
+                                <h6 class="fw-800 mb-0">Priya Patel</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted italic">"Authentic products and the best prices in India. The UI is so smooth and magical!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://i.pravatar.cc/100?img=59" class="avatar" alt="User">
+                            <div>
+                                <h6 class="fw-800 mb-0">Amit Varma</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted italic">"Customer support helped me with my return in minutes. Highly recommended for worry-free shopping."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. APP DOWNLOAD -->
+    <div class="container">
+        <div class="app-section shadow-lg">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-800 fs-1 mb-3">Shop Faster with the <br>ShopEasy Mobile App</h2>
+                    <p class="fs-5 mb-5 opacity-75">Join millions of Indians who shop smarter. Exclusive app-only coupons and live sale notifications await you!</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <button class="btn btn-dark btn-lg rounded-pill px-4 py-2"><i class="bi bi-google-play me-2"></i> Play Store</button>
+                        <button class="btn btn-dark btn-lg rounded-pill px-4 py-2"><i class="bi bi-apple me-2"></i> App Store</button>
+                    </div>
+                </div>
+            </div>
+            <img src="https://www.pngmart.com/files/15/Apple-iPhone-12-Transparent-PNG.png" class="app-mockup d-none d-lg-block" alt="App">
+        </div>
+    </div>
+    
+    <!-- Footer Include -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

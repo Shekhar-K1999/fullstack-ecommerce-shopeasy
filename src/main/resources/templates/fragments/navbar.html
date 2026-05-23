@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+    <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-shopeasy fixed-top">
+        <div class="container">
+            
+            <!-- LEFT: Logo & Links -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">ShopEasy</a>
+                
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav ms-4">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="catDrop">Categories</a>
+                            <ul class="dropdown-menu shadow-lg">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Electronics</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-bag-heart"></i> Fashion</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-house"></i> Home Decor</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-fire"></i> Hot Deals</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CENTER: Search Hub -->
+            <div class="search-container d-none d-lg-block">
+                <div class="search-bar-wrapper">
+                    <input type="text" class="search-bar-input" placeholder="Search for products, brands...">
+                    <i class="bi bi-search search-icon-inside"></i>
+                </div>
+            </div>
+
+            <!-- RIGHT: Actions, Admin & Icons -->
+            <div class="action-hub">
+                
+                <!-- Magical Auth & Admin Buttons -->
+                <div class="d-none d-xl-flex align-items-center gap-2">
+                    <a th:href="@{/login}" class="btn-magical btn-login">Login</a>
+                    <a th:href="@{/register}" class="btn-magical btn-register">Register</a>
+                    <a th:href="@{/admin}" class="btn-magical btn-admin">Admin</a>
+                </div>
+
+                <!-- Icons (Now Right of Admin) -->
+                <div class="d-flex gap-2">
+                    <a href="#" class="icon-circle" title="Wishlist">
+                        <i class="bi bi-heart-fill text-danger"></i>
+                    </a>
+                    <a href="#" class="icon-circle" title="Cart">
+                        <i class="bi bi-cart4"></i>
+                        <span class="badge-colorful">3</span>
+                    </a>
+                </div>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-container dropdown mr-10">
+                    <img src="https://i.pravatar.cc/150?u=shopeasy-elite" alt="User" class="avatar-img" role="button">
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li class="dropdown-header">
+                            <div class="fw-bold text-dark fs-6">Alex Rivera</div>
+                            <small class="text-muted">alex.rivera@premium.com</small>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> My Account</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-seam"></i> Track Orders</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-wallet2"></i> My Wallet</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Sign Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0 ms-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileContent">
+                    <i class="bi bi-list fs-1 text-primary"></i>
+                </button>
+            </div>
+
+            <!-- MOBILE CONTENT -->
+            <div class="collapse navbar-collapse" id="mobileContent">
+                <div class="d-lg-none">
+                    <div class="search-bar-wrapper mt-3">
+                        <input type="text" class="search-bar-input" placeholder="Search products...">
+                        <i class="bi bi-search search-icon-inside"></i>
+                    </div>
+                    <ul class="navbar-nav mt-3">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Flash Deals</a></li>
+                    </ul>
+                    <div class="mt-4 d-grid gap-2">
+                        <a th:href="@{/login}" class="btn-magical btn-login w-100">Login</a>
+                        <a th:href="@{/register}" class="btn-magical btn-register w-100">Register</a>
+                        <a th:href="@{/admin}" class="btn-magical btn-admin w-100">Admin Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- UI Demo Content -->
+<!--     <div class="container text-center mt-5 pt-5">
+        <div class="p-5 bg-white rounded-5 shadow-sm mt-5">
+            <h2 class="fw-bold" style="letter-spacing: -1.5px;">Magical ShopEasy Experience</h2>
+            <p class="text-muted">Logo color ab smoothly flow ho raha hai aur buttons zyada magical banaye gaye hain.</p>
+        </div>
+    </div> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

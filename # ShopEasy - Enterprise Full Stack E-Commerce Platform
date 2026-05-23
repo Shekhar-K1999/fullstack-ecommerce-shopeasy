@@ -1,0 +1,13 @@
+## Features
+
+- Spring Boot 3.5.14
+- Spring Security 6
+- JWT Authentication
+- OAuth2 Google Login
+- OAuth2 Facebook Login
+- Thymeleaf Frontend
+- Enterprise Role-Based Security
+- REST APIs
+- Image Upload System
+- Validation + Exception Handling
+- Responsive UI
